@@ -21,24 +21,23 @@ class AcrossViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Change the animations when a different segment is selected.
         segmentControl.addTarget(self, action: #selector(self.changeAnimation), for: .valueChanged)
         
-        
-        // Add the animations to the segment control.
+        // Replace the default segments with the animations.
         segmentControl.removeAllSegments()
         for i in 0..<animations.count {
             segmentControl.insertSegment(withTitle: animations[i], at: i, animated: true)
         }
-        segmentControl.selectedSegmentIndex = 0
-
-        
-        
     }
 
     
     @objc func changeAnimation() {
         
+        // Stop any running timers
         timer.invalidate()
+        
+        // To remove all the circles remaining in the view.
         let remainingCircles = view.subviews
         for each in remainingCircles {
             if (each.tag == 1){
@@ -46,11 +45,11 @@ class AcrossViewController: UIViewController  {
             }
         }
         
-        let animationChoosen = animations[segmentControl.selectedSegmentIndex]
-        switch animationChoosen {
-        case "Ball":
+        
+        switch segmentControl.selectedSegmentIndex {
+        case 0: // Ball
             // Start the timer for the circle animation
-             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.circleAnimation), userInfo: nil, repeats: true)
+             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.circleAnimation), userInfo: nil, repeats: true)
             timer.fire()
         default:
             print("Still not supported yet!")
@@ -65,15 +64,14 @@ class AcrossViewController: UIViewController  {
         // Initialize the circle.
         let circleContainer = UIView()
         circleContainer.frame.size = CGSize(width: 20.0, height: 20.0)
+        circleContainer.layer.cornerRadius = 10 // To make it a circle.
         circleContainer.tag = 1
-        
-        
+
         // Center it in the view.
         circleContainer.center.x = view.center.x - view.frame.size.width + 5
         circleContainer.center.y = view.center.y
         
-        // To make it a circle
-        circleContainer.layer.cornerRadius = 10
+        
         
         // Generate a random color.
         circleContainer.backgroundColor = UIColor(red:CGFloat(drand48()) , green:CGFloat(drand48()) , blue: CGFloat(drand48()), alpha: 1)
@@ -82,13 +80,13 @@ class AcrossViewController: UIViewController  {
         view.addSubview(circleContainer)
         view.layoutIfNeeded()
         
-        // Animate then remove it on finish
-        UIView.animate(withDuration: 5, delay: 0, options: .curveEaseIn, animations:{
+        
+        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseIn, animations:{
+            // Move to the max horizontal distance (x).
             circleContainer.center = CGPoint(x: self.view.bounds.maxX , y: self.view.center.y)
-        }, completion: { (fin) in
-            if (fin) {
+        }, completion: { _ in
+                // After completion remove it from the view.
                 circleContainer.removeFromSuperview()
-            }
         })
         
         

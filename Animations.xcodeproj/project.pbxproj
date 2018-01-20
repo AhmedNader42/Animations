@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841D562B2010FFF9008531C4 /* bryan-goff-360297.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 841D562A2010FFF9008531C4 /* bryan-goff-360297.jpg */; };
+		841D562E20110039008531C4 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D562D20110039008531C4 /* TransitionViewController.swift */; };
+		841D5631201100F9008531C4 /* PopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D5630201100F9008531C4 /* PopTransition.swift */; };
+		8431FBE12010F0F5008E9C5C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431FBE02010F0F5008E9C5C /* LoadingViewController.swift */; };
 		848B0F8F200FA6AD00802326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B0F8E200FA6AD00802326 /* AppDelegate.swift */; };
-		848B0F91200FA6AE00802326 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B0F90200FA6AE00802326 /* FirstViewController.swift */; };
-		848B0F93200FA6AE00802326 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B0F92200FA6AE00802326 /* SecondViewController.swift */; };
+		848B0F91200FA6AE00802326 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B0F90200FA6AE00802326 /* FieldViewController.swift */; };
+		848B0F93200FA6AE00802326 /* AcrossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B0F92200FA6AE00802326 /* AcrossViewController.swift */; };
 		848B0F96200FA6AE00802326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848B0F94200FA6AE00802326 /* Main.storyboard */; };
 		848B0F98200FA6AE00802326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848B0F97200FA6AE00802326 /* Assets.xcassets */; };
 		848B0F9B200FA6AE00802326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848B0F99200FA6AE00802326 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841D562A2010FFF9008531C4 /* bryan-goff-360297.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bryan-goff-360297.jpg"; sourceTree = "<group>"; };
+		841D562D20110039008531C4 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		841D5630201100F9008531C4 /* PopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransition.swift; sourceTree = "<group>"; };
+		8431FBE02010F0F5008E9C5C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		848B0F8B200FA6AD00802326 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B0F8E200FA6AD00802326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		848B0F90200FA6AE00802326 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		848B0F92200FA6AE00802326 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		848B0F90200FA6AE00802326 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		848B0F92200FA6AE00802326 /* AcrossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcrossViewController.swift; sourceTree = "<group>"; };
 		848B0F95200FA6AE00802326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		848B0F97200FA6AE00802326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848B0F9A200FA6AE00802326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841D562C2010FFFD008531C4 /* Transitions Pics */ = {
+			isa = PBXGroup;
+			children = (
+				841D562A2010FFF9008531C4 /* bryan-goff-360297.jpg */,
+			);
+			path = "Transitions Pics";
+			sourceTree = "<group>";
+		};
+		841D562F201100D8008531C4 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				841D5630201100F9008531C4 /* PopTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		8431FBE22010FF05008E9C5C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				848B0F90200FA6AE00802326 /* FieldViewController.swift */,
+				848B0F92200FA6AE00802326 /* AcrossViewController.swift */,
+				8431FBE02010F0F5008E9C5C /* LoadingViewController.swift */,
+				841D562D20110039008531C4 /* TransitionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		848B0F82200FA6AD00802326 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				848B0F8E200FA6AD00802326 /* AppDelegate.swift */,
-				848B0F90200FA6AE00802326 /* FirstViewController.swift */,
-				848B0F92200FA6AE00802326 /* SecondViewController.swift */,
+				8431FBE22010FF05008E9C5C /* ViewController */,
+				841D562C2010FFFD008531C4 /* Transitions Pics */,
+				841D562F201100D8008531C4 /* Transitions */,
 				848B0F94200FA6AE00802326 /* Main.storyboard */,
 				848B0F97200FA6AE00802326 /* Assets.xcassets */,
 				848B0F99200FA6AE00802326 /* LaunchScreen.storyboard */,
@@ -129,6 +165,7 @@
 				848B0F9B200FA6AE00802326 /* LaunchScreen.storyboard in Resources */,
 				848B0F98200FA6AE00802326 /* Assets.xcassets in Resources */,
 				848B0F96200FA6AE00802326 /* Main.storyboard in Resources */,
+				841D562B2010FFF9008531C4 /* bryan-goff-360297.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848B0F93200FA6AE00802326 /* SecondViewController.swift in Sources */,
+				848B0F93200FA6AE00802326 /* AcrossViewController.swift in Sources */,
 				848B0F8F200FA6AD00802326 /* AppDelegate.swift in Sources */,
-				848B0F91200FA6AE00802326 /* FirstViewController.swift in Sources */,
+				848B0F91200FA6AE00802326 /* FieldViewController.swift in Sources */,
+				841D562E20110039008531C4 /* TransitionViewController.swift in Sources */,
+				841D5631201100F9008531C4 /* PopTransition.swift in Sources */,
+				8431FBE12010F0F5008E9C5C /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
